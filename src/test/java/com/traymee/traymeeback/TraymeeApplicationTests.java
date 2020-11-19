@@ -1,13 +1,13 @@
-package com.traimee.traimeeback;
+package com.traymee.traymeeback;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TraimeeBackApplicationTests {
+class TraymeeApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
+	@Test
+	void contextLoads() {
+	}
 
 }

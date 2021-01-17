@@ -1,7 +1,8 @@
-package com.traymee.traymeeback.service;
+package com.traymee.traymeeback.service.impl;
 
 import com.traymee.traymeeback.db.entity.User;
 import com.traymee.traymeeback.db.repository.UserRepository;
+import com.traymee.traymeeback.service.GenericService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.security.core.userdetails.UserDetails;

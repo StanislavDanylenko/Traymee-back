@@ -1,7 +1,8 @@
-package com.traymee.traymeeback.service;
+package com.traymee.traymeeback.service.impl;
 
 import com.traymee.traymeeback.db.entity.ExampleEntity;
 import com.traymee.traymeeback.db.repository.ExampleEntityRepository;
+import com.traymee.traymeeback.service.GenericService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

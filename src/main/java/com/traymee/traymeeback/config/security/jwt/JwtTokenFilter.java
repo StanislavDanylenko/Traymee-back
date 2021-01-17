@@ -3,6 +3,7 @@ package com.traymee.traymeeback.config.security.jwt;
 import com.traymee.traymeeback.exception.InvalidJwtAuthenticationException;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.GenericFilterBean;
 
@@ -39,6 +40,11 @@ public class JwtTokenFilter extends GenericFilterBean {
         } catch (InvalidJwtAuthenticationException ex) {
             HttpServletResponse resp = (HttpServletResponse) res;
             resp.getWriter().append(ex.getMessage());
+            resp.setStatus(401);
+            return;
+        } catch (UsernameNotFoundException ex) {
+            HttpServletResponse resp = (HttpServletResponse) res;
+            resp.getWriter().append("Expired or invalid JWT token");
             resp.setStatus(401);
             return;
         }

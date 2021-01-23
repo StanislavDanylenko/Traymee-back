@@ -9,4 +9,5 @@ public class TraymeeApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(TraymeeApplication.class, args);
 	}
+
 }
